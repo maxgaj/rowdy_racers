@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
+<?import be.maxgaj.cm.Square?>
 
 <HBox prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ded5c8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.maxgaj.cm.PrimaryController">
    <children>
@@ -58,15 +59,6 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@pikachu.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
                </children>
             </GridPane>
          </children>
