@@ -1,5 +1,6 @@
-package be.maxgaj.cm;
+package be.maxgaj.cm.rowdyracers;
 
+import be.maxgaj.cm.rowdyracers.domain.Game;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,8 +18,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        stage.setWidth(1200);
-        stage.setHeight(800);
+//        stage.setWidth(1220);
+//        stage.setHeight(840);
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();
@@ -29,11 +30,12 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
     public static void main(String[] args) {
+//        Game game = new Game(10,10);
         launch();
     }
 
