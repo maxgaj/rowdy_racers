@@ -53,11 +53,11 @@ public class Square {
         return colIndex;
     }
 
-//    @Override
-//    public String toString() {
-//        if (wall == null){
-//            return "[ ] ";
-//        }
-//        return "[X] ";
-//    }
+    @Override
+    public String toString() {
+        if (wall == null){
+            return "[ ] ";
+        }
+        return "[X] ";
+    }
 }

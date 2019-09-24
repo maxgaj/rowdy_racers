@@ -55,9 +55,9 @@ public class Game {
         }
     }
 
-//    public void printGrid(){
-//        grid.printGrid();
-//    }
+    public void printGrid(){
+        grid.printGrid();
+    }
 
 
 }

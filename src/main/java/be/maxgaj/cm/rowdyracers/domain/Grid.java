@@ -55,14 +55,14 @@ public class Grid {
         List<Wall> walls = wallsGenerator.generateRandomWalls();
     }
 
-//    public void printGrid(){
-//        for (Square[] row: squares) {
-//            for (Square square : row){
-//                System.out.print(square);
-//            }
-//            System.out.println("");
-//        }
-//    }
+    public void printGrid(){
+        for (Square[] row: squares) {
+            for (Square square : row){
+                System.out.print(square);
+            }
+            System.out.println("");
+        }
+    }
 
 
     public int getNumberOfColumns() {
