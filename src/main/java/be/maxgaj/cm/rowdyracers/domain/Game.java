@@ -55,6 +55,10 @@ public class Game {
         }
     }
 
+    public Square getSquareAtPosition(int rowId, int colId){
+        return grid.getSquareAtPosition(rowId, colId);
+    }
+
     public void printGrid(){
         grid.printGrid();
     }

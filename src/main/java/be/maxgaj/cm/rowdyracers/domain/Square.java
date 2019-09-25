@@ -53,6 +53,10 @@ public class Square {
         return colIndex;
     }
 
+    public boolean hasWall(){
+        return wall != null;
+    }
+
     @Override
     public String toString() {
         if (wall == null){
