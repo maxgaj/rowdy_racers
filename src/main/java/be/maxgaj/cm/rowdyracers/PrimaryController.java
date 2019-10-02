@@ -27,16 +27,24 @@ public class PrimaryController {
 
     public void startGame(int width, int height) {
         game = new Game(width, height);
-        game.printGrid();
+        createGridPane(width, height);
+    }
+
+    private void createGridPane(int width, int height) {
         GridPane gridPane = new GridPane();
         for (int i=0; i<height; i++){
             for (int j=0; j<width; j++){
-                Square square = game.getSquareAtPosition(i, j);
-                GuiSquare guiSquare = new GuiSquare(square);
-                GridPane.setConstraints(guiSquare, i, j);
+                GuiSquare guiSquare = createGuiSquare(i, j);
                 gridPane.getChildren().add(guiSquare);
             }
         }
         rightAnchorPane.getChildren().add(gridPane);
+    }
+
+    private GuiSquare createGuiSquare(int rowIndex, int colIndex) {
+        Square square = game.getSquareAtPosition(rowIndex, colIndex);
+        GuiSquare guiSquare = new GuiSquare(square);
+        GridPane.setConstraints(guiSquare, colIndex, rowIndex);
+        return guiSquare;
     }
 }

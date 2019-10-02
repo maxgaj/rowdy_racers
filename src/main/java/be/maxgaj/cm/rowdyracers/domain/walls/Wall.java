@@ -10,8 +10,12 @@ public class Wall {
 
     public Wall(WallDirection direction, int length, Square startingPosition) {
         this.direction = direction;
-        this.length = length;
+        setLength(length);
         setWallStartingPosition(startingPosition);
+    }
+
+    private void setLength(int length) {
+        this.length = Math.max(length, 2);
     }
 
 

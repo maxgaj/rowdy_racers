@@ -64,4 +64,12 @@ public class Square {
         }
         return "[X] ";
     }
+
+    public boolean hasPlayer() {
+        return player != null;
+    }
+
+    public int getPlayerNumber() {
+        return player.getPlayerNumber();
+    }
 }

@@ -27,9 +27,44 @@ public class GuiSquare extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.square = square;
+        setImageView();
+        renderGuiSquare();
+    }
+
+    public void setImageView(){
+        ImageView imageView = new ImageView();
+        imageView.setFitHeight(this.getPrefHeight() - 6);
+        imageView.setFitWidth(this.getPrefWidth() - 6);
+        AnchorPane.setTopAnchor(imageView, 2.0);
+        AnchorPane.setRightAnchor(imageView, 2.0);
+        AnchorPane.setBottomAnchor(imageView, 2.0);
+        AnchorPane.setLeftAnchor(imageView, 2.0);
+        this.getChildren().add(imageView);
+        this.imageView = imageView;
+    }
+
+    private void renderGuiSquare(){
         if (square.hasWall()){
             setWall();
         }
+        else if (square.hasPlayer()){
+            setPlayer(square.getPlayerNumber());
+        }
+    }
+
+    private void setPlayer(int playerNumber) {
+        FileInputStream input = null;
+        try {
+            if (playerNumber == 1){
+                input = new FileInputStream("src/main/resources/be/maxgaj/cm/rowdyracers/img/pikachu.png");
+            } else {
+                input = new FileInputStream("src/main/resources/be/maxgaj/cm/rowdyracers/img/charmander.png");
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Image image = new Image(input);
+        setImage(image);
     }
 
     private void setWall() {
@@ -40,13 +75,10 @@ public class GuiSquare extends AnchorPane {
             e.printStackTrace();
         }
         Image image = new Image(input);
-        ImageView imageView = new ImageView(image);
-        imageView.setFitHeight(this.getPrefHeight() - 6);
-        imageView.setFitWidth(this.getPrefWidth() - 6);
-        AnchorPane.setTopAnchor(imageView, 2.0);
-        AnchorPane.setRightAnchor(imageView, 2.0);
-        AnchorPane.setBottomAnchor(imageView, 2.0);
-        AnchorPane.setLeftAnchor(imageView, 2.0);
-        this.getChildren().add(imageView);
+        setImage(image);
+    }
+
+    private void setImage(Image image){
+        imageView.setImage(image);
     }
 }
