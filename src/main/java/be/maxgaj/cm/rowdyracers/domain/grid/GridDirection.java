@@ -1,6 +1,6 @@
-package be.maxgaj.cm.rowdyracers.domain;
+package be.maxgaj.cm.rowdyracers.domain.grid;
 
-public enum AdjacentDirection {
+public enum GridDirection {
     NORTH(0),
     NORTH_EAST(1),
     EAST(2),
@@ -12,7 +12,7 @@ public enum AdjacentDirection {
 
     private int index;
 
-    AdjacentDirection(int index) {
+    GridDirection(int index) {
         this.index = index;
     }
 

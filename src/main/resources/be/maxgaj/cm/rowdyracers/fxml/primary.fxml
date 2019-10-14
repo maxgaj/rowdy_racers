@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import be.maxgaj.cm.rowdyracers.gui.Splashscreen?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #ded5c8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.maxgaj.cm.rowdyracers.PrimaryController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="400.0">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                <children>
-                  <ImageView fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="130.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/rowdy_racers.png" />
                      </image>
@@ -22,7 +21,7 @@
                         <Insets left="15.0" right="15.0" />
                      </VBox.margin>
                   </ImageView>
-                  <AnchorPane fx:id="leftAnchorPane" prefHeight="650.0" prefWidth="400.0">
+                  <AnchorPane fx:id="leftAnchorPane" prefHeight="650.0" prefWidth="380.0">
                   </AnchorPane>
                </children>
             </VBox>
